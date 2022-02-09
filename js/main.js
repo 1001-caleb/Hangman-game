@@ -1,3 +1,4 @@
+
 const PALABRAS = [
     "ALURA",
     "CHALLENGE",
