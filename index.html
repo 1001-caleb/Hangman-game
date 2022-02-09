@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del ahorcado</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar__container container">
+            <div class="navbar__img">
+                <img src="img/icon.png" alt="" class="navbar__logo">
+            </div>
+            <div class="navbar__links">
+                <a href="#home" class="navbar__cta">Inicio</a>
+                <a href="#palabras" class="navbar__cta">Agregar palabra</a>
+                <a href="#juego" class="navbar__cta">Jugar</a>
+            </div>
+        </div>
+
+    </nav>
+    <section id="home" class="home container">
+        <div class="home__container">
+            <h1 class="home__title">Juego del ahorcado</h1>
+            <p class="home__paragraph">El increible juego del ahorcado jeje</p>
+
+            <div class="home__buttons">
+                <a href="#juego" class="home__btn">Juega ya!</a>
+                <a href="#palabras" class="home__btn">Agregar palabras</a>
+            </div>
+        </div>
+        <div class="home__img">
+            <img src="img/horca.png" alt="" class="home__pic">
+        </div>
+
+    </section>
+
+    <section id="palabras" class="palabras container">
+        <form action="" class="palabras__form">
+            <input type="text" name="" id="palabras__insertar" class="palabras__insertar" value=""  onkeyup="javascript:this.value=this.value.toUpperCase();">
+            <input type="button" value="Insertar palabra" class="palabra__enviar" id="palabra__enviar">
+        </form>
+    </section>
+    <section id="juego" class="juego container">
+        <div class="juego__imagen">
+            <img src="img/0.png" alt="" class="juego__img">
+        </div>
+        <form id="juego__form">
+            <div style="text-align:center">
+              <label for="letra">Inserte una Letra:</label>
+              <input id="campo__letra" class="campo_letra" maxlength="1" pattern="[A-Z]" type="text" onkeyup="javascript:this.value=this.value.toUpperCase();"> 
+              <input type="button" value="PROBAR LETRA" class="probar__letra" id="probar__letra">
+              <input type="button" value="JUGAR" id="btn__jugar">
+            </div>
+          </form>
+    </section>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
