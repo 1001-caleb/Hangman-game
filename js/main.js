@@ -40,10 +40,27 @@ function comprobar(){
     document.getElementById("frase").innerHTML = palabraAdivinando;
 
     if (vidas == 0){
-        alert("te quedaste sin vidas :((");
+        Swal.fire({
+            icon: 'error',
+            title: 'Perdiste :((',
+            text: 'No adivinas la palabra oculta',
+          })
     }
     if(palabraAdivinando.search("_")== -1){
-        alert("ganaste :p");
+        Swal.fire({
+            title: 'Ganaste! :p',
+            text: 'Adivinaste la palabra oculta',
+            width: 600,
+            padding: '3em',
+            color: '#716add',
+            background: '#fff url(/images/trees.png)',
+            backdrop: `
+              rgba(0,0,123,0.4)
+              url("/images/nyan-cat.gif")
+              left top
+              no-repeat
+            `
+          })
     }
     document.getElementById("letra").value="";
     document.getElementById("letra").focus();

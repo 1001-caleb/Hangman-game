@@ -42,7 +42,7 @@
     <section id="palabras" class="palabras container">
         <form action="" class="palabras__form">
             <input type="text" name="" id="palabras__insertar" class="palabras__insertar" value=""  onkeyup="javascript:this.value=this.value.toUpperCase();">
-            <input type="button" value="Insertar palabra" class="palabra__enviar" id="palabra__enviar">
+            <input type="button" value="Insertar palabra" class="home__btn" id="palabra__enviar">
         </form>
     </section>
     <section id="juego" class="juego container">
@@ -51,13 +51,17 @@
         </canvas>
 
         <div class="juego__logica">
-            <input type="text" name="" id="letra" maxlength= 1>
-            <input type="button" value="COMPROBAR" id="boton">
-            <span id="frase"></span>
-            <span id="vida">Te quedan 4 vidas</span>
+            <input type="text" name="" id="letra" maxlength= 1 style="text-transform:uppercase">
+            <input type="button" value="COMPROBAR" id="boton" class="home__btn">
+            <div id="texto">
+                <span id="frase"></span>
+                <span id="vida">Te quedan 4 vidas</span>
+            </div>
+
         </div>
     </section>
 <script src="js/main.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
