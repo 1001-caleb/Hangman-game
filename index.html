@@ -46,20 +46,18 @@
         </form>
     </section>
     <section id="juego" class="juego container">
-        <div class="juego__imagen">
-            <img src="img/0.png" alt="" class="juego__img">
+        <canvas id="lienzo">
+            Tu navegador no acepta canvas
+        </canvas>
+
+        <div class="juego__logica">
+            <input type="text" name="" id="letra">
+            <input type="button" value="COMPROBAR" id="boton">
+            <span id="frase"></span>
+            <span id="vida">Te quedan 4 vidas</span>
         </div>
-        <form id="juego__form">
-            <div style="text-align:center">
-              <label for="letra">Inserte una Letra:</label>
-              <input id="campo__letra" class="campo_letra" maxlength="1" pattern="[A-Z]" type="text" onkeyup="javascript:this.value=this.value.toUpperCase();"> 
-              <input type="button" value="PROBAR LETRA" class="probar__letra" id="probar__letra">
-              <input type="button" value="JUGAR" id="btn__jugar">
-            </div>
-          </form>
     </section>
 <script src="js/main.js"></script>
-
 </body>
 
 </html>
