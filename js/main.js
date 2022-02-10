@@ -5,7 +5,12 @@ let palabraAdivinando = "" //palabra que va adivinando el user
 let vidas = 4;
 document.getElementById("boton").addEventListener("click", comprobar);
 
-iniciar();
+function comenzarJuego(){
+    
+    document.getElementById("btn__jugar").addEventListener("click", iniciar);
+}
+comenzarJuego();
+
 //logica del juego
 function iniciar(){
     palabraOculta = palabras[Math.floor(Math.random()*palabras.length)];
@@ -17,8 +22,16 @@ function iniciar(){
     document.getElementById("frase").innerHTML=palabraAdivinando;
 }
 
+btnAgregar = document.getElementById("palabra__enviar");
+btnAgregar.onclick = añadirPalabraArray
 
+function añadirPalabraArray (){
+    let palabraNueva = document.getElementById("palabras__insertar").value;
+    console.log(palabraNueva);
 
+    palabras.push(palabraNueva);
+    console.log(palabras);
+}
 
 function comprobar(){
     let letra = document.getElementById("letra").value.toUpperCase();
@@ -121,8 +134,10 @@ function dibujar(){
 };
 
 
-
-
+    document.getElementById("btn__nuevo").addEventListener("click", jugarDeNuevo);
+    function jugarDeNuevo(){
+        document.location.reload();
+    }
 
 
 
